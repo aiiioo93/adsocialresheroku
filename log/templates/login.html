@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Se connecter</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.username.label_tag }}
+        {{ form.username }}
+        {% if form.username.errors %}
+        <span class="form-error">{{ form.username.errors.0 }}</span>
+        {% endif %}
+    </div>
+    <div>
+        {{ form.password.label_tag }}
+        {{ form.password }}
+        {% if form.password.errors %}
+        <span class="form-error">{{ form.password.errors.0 }}</span>
+        {% endif %}
+    </div>
+    <button type="submit">Se connecter</button>
+  </form>
+  <div class="form-links">
+    <a href="{% url 'log:register' %}">Créer un compte</a>
+    <a href="{% url 'log:forgot_password' %}">Mot de passe oublié ?</a>
+  </div>
+{% endblock %}

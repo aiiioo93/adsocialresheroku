@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Bienvenue sur la page d'accueil</h2>
+  <p>Seuls les utilisateurs connectés peuvent voir cette page.</p>
+  <a href="{% url 'log:logout' %}">deconnection</a>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Créer un compte</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.pseudo.label_tag }}
+        {{ form.pseudo }}
+        {% if form.pseudo.errors %}
+        <span class="form-error">{{ form.pseudo.errors.0 }}</span>
+        {% endif %}
+    </div>
+    <div>
+        {{ form.email.label_tag }}
+        {{ form.email }}
+        {% if form.email.errors %}
+        <span class="form-error">{{ form.email.errors.0 }}</span>
+        {% endif %}
+    </div>
+    <div>
+        {{ form.password1.label_tag }}
+        {{ form.password1 }}
+        {% if form.password1.errors %}
+        <span class="form-error">{{ form.password1.errors.0 }}</span>
+        {% endif %}
+    </div>
+    <div>
+        {{ form.password2.label_tag }}
+        {{ form.password2 }}
+        {% if form.password2.errors %}
+        <span class="form-error">{{ form.password2.errors.0 }}</span>
+        {% endif %}
+    </div>
+    <button type="submit">Créer un compte</button>
+  </form>
+  <div class="form-links">
+    <a href="{% url 'log:login' %}">Se connecter</a>
+    <a href="{% url 'log:forgot_password' %}">Mot de passe oublié ?</a>
+  </div>
+{% endblock %}

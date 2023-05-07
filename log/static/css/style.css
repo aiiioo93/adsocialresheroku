@@ -1,0 +1,143 @@
+/* styles.css */
+
+/* Réinitialisation des styles par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Styles de base */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+form {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"] {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    form button[type="submit"] {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+/* Styles pour les liens dans le formulaire */
+/* Styles pour les liens dans le formulaire */
+.form-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+
+.form-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+/* Styles pour le formulaire de réinitialisation du mot de passe */
+.forgot-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: auto;
+}
+
+.forgot-form p {
+  margin: 5px 0;
+}
+
+.forgot-form button {
+  margin-top: 15px;
+}
+
+.form-error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
